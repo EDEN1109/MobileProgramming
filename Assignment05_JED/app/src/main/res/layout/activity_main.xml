@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 레이아웃을 리니어 레이아웃으로 변경 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- 출발지와 목적지를 알려주는 텍스트 뷰, 왼쪽으로 10dp 위로 10dp의 여백을 가짐 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Korea -> USA"
+        android:textSize="30dp" />
+
+    <!-- 좌석의 등급을 선택하는 항목임을 알려주는 텍스트 뷰, 왼쪽으로 10dp 위로 15dp의 여백을 가짐 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="좌석 등급"
+        android:textSize="20dp" />
+
+    <!-- 좌석 선택을 위한 Radio그룹, 다중선택을 하면 안되므로 Radio를 사용하였다. 또한 항목이 수평으로 놓여야하기 떄문에 orientation은 horizontal이다 -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <!-- 각 좌석 등급의 Radio 버튼들, 버튼에 맞게 상호작용 하여야 하므로 모두 id가 배정되어 있고, onClick이 사용되었다. -->
+        <RadioButton
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="First"
+            android:textSize="25dp" />
+
+        <RadioButton
+            android:id="@+id/business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="Business"
+            android:textSize="25dp" />
+
+        <RadioButton
+            android:id="@+id/economy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="Economy"
+            android:textSize="25dp" />
+    </RadioGroup>
+
+    <!-- 기내식을 선택하는 항목임을 알려주는 텍스트 뷰, 왼쪽으로 10dp 위로 15dp의 여백을 가짐 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="기내식"
+        android:textSize="20dp" />
+
+    <!-- 좌석 선택을 위한 체크박스들의 리니어 레이아웃, 다중선택이 가능하므로 ChackBox를 사용하였다. -->
+    <!-- 또한 항목이 수평으로 놓여야하기 때문에 리니어 레이아웃의 orientation은 horizontal이다 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <!-- 각 기내식의 CheckBox들, 버튼에 맞게 상호작용 하여야 하므로 모두 id가 배정되어 있고, onClick이 사용되었다. -->
+        <CheckBox
+            android:id="@+id/korean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="Korean"
+            android:textSize="25dp" />
+
+        <CheckBox
+            android:id="@+id/western"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="Western"
+            android:textSize="25dp" />
+
+        <CheckBox
+            android:id="@+id/chinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="Chinese"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <!-- 좌석 위치를 선택하는 항목임을 알려주는 텍스트 뷰, 왼쪽으로 10dp 위로 15dp의 여백을 가짐 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="좌석 위치"
+        android:textSize="20dp" />
+
+    <!-- 좌석 선택을 위한 Radio그룹, 다중선택을 하면 안되므로 Radio를 사용하였다. 또한 항목이 수평으로 놓여야하기 떄문에 orientation은 horizontal이다 -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <!-- 각 좌석 위치의 Radio 버튼들, 버튼에 맞게 상호작용 하여야 하므로 모두 id가 배정되어 있고, onClick이 사용되었다. -->
+        <RadioButton
+            android:id="@+id/aisle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="Aisle seat"
+            android:textSize="25dp" />
+
+        <RadioButton
+            android:id="@+id/window"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:onClick="onClick"
+            android:text="Window seat"
+            android:textSize="25dp" />
+
+    </RadioGroup>
+
+    <!-- 인원수를 알려줄 항목들이 들어갈 레이아웃, 가운데 정렬하였으며, 위로 20의 여백을 가진다. -->
+    <!-- 또한 항목이 수평으로 놓여야하기 때문에 리니어 레이아웃의 orientation은 horizontal이다 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <!-- 인원 정보임을 알려주기 위한 텍스트뷰 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of people"
+            android:textSize="25dp" />
+
+        <!-- 인원 수가 적힌 텍스트뷰, 버튼과 상호작용 하여야 하므로 id가 있으며, 앞선 텍스트뷰와 40dp의 거리를 유지하고 있다. -->
+        <!-- 색상은 검정으로 이전 텍스트뷰와 구분하였다. -->
+        <TextView
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="1"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+        <!-- 인원수를 변경할 수 있는 버튼들, 버튼에 맞게 상호작용 하여야 하므로 모두 id가 배정되어 있고, onClick이 사용되었다. -->
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="onClick"
+            android:text="+"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="onClick"
+            android:text="-"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <!-- 최종가격을 알려줄 항목들이 들어갈 레이아웃, 가운데 정렬하였으며, 위로 20의 여백을 가진다. -->
+    <!-- 또한 항목이 수평으로 놓여야하기 때문에 리니어 레이아웃의 orientation은 horizontal이다 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <!-- 가격 정보임을 알려주기 위한 텍스트뷰 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TOTAL"
+            android:textSize="25dp" />
+
+        <!-- 인원 수가 적힌 텍스트뷰, 버튼과 상호작용 하여야 하므로 id가 있으며, 앞선 텍스트뷰와 30dp의 거리를 유지하고 있다. -->
+        <!-- 색상은 검정으로 이전 텍스트뷰와 구분하였다. -->
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <!-- 좌석등급에 따라 변경되는 이미지뷰, 버튼과 상호작용 하여야 하므로 id가 있으며, 가운데 정렬하였고 아래로 10dp의 여백이 있다. -->
+    <ImageView
+        android:id="@+id/airimage"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/airplane" />
+
+</LinearLayout>

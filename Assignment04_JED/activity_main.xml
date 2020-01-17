@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+        <TableRow
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_marginLeft="20pt"
+                android:layout_marginTop="25pt"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/image" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20pt"
+                    android:layout_marginTop="25pt"
+                    android:text="EDEN JIN\n\nKoreaTech, Computer Science and Engineering\n\n010-1234-1234\n\nadmin@koreatech.ac.kr\n\n4공학관 125호" />
+            </RelativeLayout>
+
+        </TableRow>
+
+
+</TableLayout>

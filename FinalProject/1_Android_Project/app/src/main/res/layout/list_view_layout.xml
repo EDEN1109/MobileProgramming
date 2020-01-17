@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/babyyelloColor">
+
+    <ImageView
+        android:id="@+id/imageView_listLayout"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_listLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="제목"
+                android:textSize="24sp"
+                android:textColor="@color/blackColor"/>
+
+            <ImageView
+                android:id="@+id/star_listLayout"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_star_black_24dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/price_listLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="공동 구매 가격 >> 0000원"
+            android:textSize="16sp"
+            android:textColor="@color/blackColor"/>
+
+        <TextView
+            android:id="@+id/party_listLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="최대 참여 인원 >> 0명"
+            android:textSize="16sp"
+            android:textColor="@color/blackColor"/>
+
+        <TextView
+            android:id="@+id/weight_listLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="인당 분배 >> 0.00kg"
+            android:textSize="16sp"
+            android:textColor="@color/blackColor"/>
+
+        <TextView
+            android:id="@+id/time_listLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="남은 시간 >> 00:00:00"
+            android:textSize="16sp"
+            android:textColor="@color/blackColor"/>
+
+    </LinearLayout>
+</LinearLayout>
